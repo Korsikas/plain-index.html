@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лагерь Вайбкодинга</title>
+<style>
+body {
+    background: #050510;
+    color: #e0e0ff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #00d4ff;
+    text-align: center;
+    font-size: 42px;
+    text-shadow: 0 0 15px #00d4ff;
+    margin-bottom: 10px;
+}
+
+.sub {
+    text-align: center;
+    color: #8888cc;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.box {
+    background: #111130;
+    border: 2px solid #00d4ff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.box h2 {
+    color: #00d4ff;
+    margin: 0 0 15px 0;
+    font-size: 24px;
+}
+
+.box p {
+    color: #ccccff;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.pioneer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #1a1a40;
+    border-left: 5px solid #00d4ff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    border: 3px solid #00d4ff;
+}
+
+.pioneer-info h3 {
+    color: #00d4ff;
+    font-size: 22px;
+    margin: 0 0 8px 0;
+}
+
+.pioneer-info p {
+    color: #aaaaff;
+    font-size: 16px;
+    margin: 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #00d4ff;
+    color: #000;
+    padding: 16px 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+.btn:hover {
+    background: #33ddff;
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
+}
+
+.email {
+    color: #00d4ff;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.footer {
+    text-align: center;
+    color: #555;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.sky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #050510;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<div class="sky" id="sky"></div>
+
+<div class="wrap">
+    <h1>ЛАГЕРЬ ВАЙБКОДИНГА</h1>
+    <p class="sub">Кодируй с душой. Создавай будущее.</p>
+
+    <div class="box">
+        <h2>О ЛАГЕРЕ</h2>
+        <p>Лагерь вайбкодинга — это место, где пенсионеры, новички и энтузиасты учатся создавать ИИ-агентов, приложения и цифровые продукты. Без сложной теории, только практика и вайб.</p>
+    </div>
+
+    <div class="box">
+        <h2>ПИОНЕРЫ ЛАГЕРЯ</h2>
+        <div class="pioneer">
+            <img src="pioneer-Vitalijus.png" alt="Виталий" class="avatar">
+            <div class="pioneer-info">
+                <h3>Виталий</h3>
+                <p>Пионер лагеря вайбкодинга. Изучает нейросети и ИИ для создания агентов и приложений. Увлекается фотографией, книгами и цигун.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>ПОДДЕРЖАТЬ ПРОЕКТ</h2>
+        <p>Лагерь развивается благодаря вашей поддержке. Каждый донат помогает создавать новые уроки и инструменты для вайбкодеров.</p>
+        <a href="#" class="btn">ПОДДЕРЖАТЬ ЛАГЕРЬ</a>
+    </div>
+
+    <div class="box">
+        <h2>КОНТАКТЫ</h2>
+        <p>Присоединяйтесь к лагерю и начните свой путь в вайбкодинге.</p>
+        <p class="email">Email: camp@vibecoding.ru</p>
+    </div>
+
+    <div class="footer">
+        2026 Лагерь Вайбкодинга. Все права защищены.
+    </div>
+</div>
+
+<script>
+var sky = document.getElementById('sky');
+for (var i = 0; i < 120; i++) {
+    var s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.opacity = Math.random();
+    sky.appendChild(s);
+}
+</script>
+
+</body>
+</html>
